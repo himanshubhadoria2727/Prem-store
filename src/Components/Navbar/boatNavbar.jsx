@@ -80,7 +80,7 @@ function Navbar() {
         <Container maxW="container.xl">
           <Stack direction="row">
             <Box  p="3">
-              <Stack paddingTop="0.6rem" direction="row" spacing={8}>
+              <Stack paddingTop="0.6rem" alignItems="center" direction="row" spacing={8}>
                 <Link to="/">
                   <Image
                     w="12rem"
@@ -134,9 +134,18 @@ function Navbar() {
                       </Text>
                     </Link>
                   </Stack>
-                ) : (
+                ) : (<>
+                  <Image
+                    w="13rem"
+                    position="relative"
+                    right="1rem"
+                    height="30px"
+                    src={logo}
+                    alt="boAt"
+                    borderRadius={10}
+                  />
                   <Menu>
-                    <MenuButton
+                    {/* <MenuButton
                       _hover={{
                         color: hoverColor,
                         textDecoration: "underline",
@@ -148,7 +157,7 @@ function Navbar() {
                       cursor="pointer"
                     >
                       More <ChevronDownIcon />
-                    </MenuButton>
+                    </MenuButton> */}
                     <MenuList>
                       <Link to="/sailwithboAt">
                         <MenuItem
@@ -172,7 +181,7 @@ function Navbar() {
                         </MenuItem>
                       </Link>
                       <Link to="/">
-                        <MenuItem
+                        <MenuItem 
                           _hover={{
                             color: hoverColor,
                             textDecoration: "underline",
@@ -182,7 +191,7 @@ function Navbar() {
                         </MenuItem>
                       </Link>
                     </MenuList>
-                  </Menu>
+                  </Menu></>
                 )}
               </Stack>
             </Box>
